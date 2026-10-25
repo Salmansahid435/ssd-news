@@ -56,7 +56,85 @@ footer p{font-size:13px;color:#d1d5db;line-height:1.8}
  .hero{padding:23px 17px}
 }
 @media(max-width:370px){.grid{grid-template-columns:1fr}}
-</style><style>
+</style>/* SSD NEWS - Mobile Friendly Design */
+* {
+  box-sizing: border-box;
+}
+
+html {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  margin: 0;
+  width: 100%;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.ssd-brand {
+  width: 100%;
+  padding: 10px;
+}
+
+.ssd-logo {
+  width: 90px;
+  height: 90px;
+  object-fit: contain;
+}
+
+.ssd-banner {
+  display: block;
+  width: 100%;
+  max-width: 1000px;
+  height: auto;
+  margin: 10px auto;
+}
+
+/* Small mobile screens */
+@media screen and (max-width: 600px) {
+  body {
+    font-size: 16px;
+  }
+
+  .ssd-brand {
+    padding: 6px;
+  }
+
+  .ssd-logo {
+    width: 72px;
+    height: 72px;
+  }
+
+  .ssd-banner {
+    width: 100%;
+    margin: 6px auto;
+  }
+
+  nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 6px;
+  }
+
+  nav a {
+    padding: 8px;
+    font-size: 14px;
+  }
+
+  button,
+  input {
+    max-width: 100%;
+    font-size: 16px;
+  }
+}<style>
 .ssd-brand {
   text-align: center;
   padding: 12px;
