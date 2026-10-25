@@ -1,1 +1,499 @@
-!2062e6adc587fc42468a465538f365e2d9c71330
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SSD NEWS | সত্যের সঙ্গে, মানুষের পাশে</title>
+<meta name="description" content="SSD News — বাংলাদেশ, বিশ্ব, রাজনীতি, খেলাধুলা, বিনোদন ও প্রযুক্তির খবর।">
+<style>
+*{box-sizing:border-box}
+body{margin:0;font-family:Arial,"Noto Sans Bengali",sans-serif;background:#f3f5f8;color:#202735}
+a{text-decoration:none;color:inherit}
+.top{background:#111827;color:white;padding:9px 4%;font-size:13px}
+.header{background:white;padding:20px 4%;display:flex;align-items:center;justify-content:space-between;gap:15px;flex-wrap:wrap}
+.logo{font-size:34px;font-weight:900;color:#d71920;letter-spacing:-1px}
+.logo span{color:#111827}
+.tag{font-size:12px;color:#555;margin-top:4px}
+.search{display:flex;gap:5px}
+.search input{padding:11px;width:180px;max-width:55vw;border:1px solid #ddd;border-radius:5px}
+button{cursor:pointer;border:0;border-radius:5px;padding:11px 14px;background:#d71920;color:white;font-weight:bold}
+nav{background:#d71920;color:white;display:flex;gap:0;overflow-x:auto;white-space:nowrap;padding:0 3%}
+nav a{padding:14px 13px;font-size:14px}
+nav a:hover{background:#a70f16}
+.container{max-width:1100px;margin:22px auto;padding:0 14px}
+.breaking{background:white;display:flex;align-items:center;gap:12px;padding:12px;margin-bottom:20px;border-radius:6px}
+.breaking b{background:#d71920;color:white;padding:9px;font-size:13px;white-space:nowrap}
+#breakingText{font-size:14px}
+.hero{background:#202735;color:white;border-radius:8px;padding:30px 22px;margin-bottom:22px}
+.hero small{color:#ff777c;font-weight:bold;letter-spacing:1px}
+.hero h1{font-size:30px;line-height:1.4;margin:12px 0}
+.hero p{color:#e2e5ec;line-height:1.8;margin-bottom:0}
+.section-title{border-left:5px solid #d71920;padding:8px 12px;margin:25px 0 15px;background:white;font-size:21px}
+.categories{display:flex;gap:9px;flex-wrap:wrap;margin-bottom:20px}
+.categories button{background:white;color:#333;border:1px solid #ddd}
+.categories button.active,.categories button:hover{background:#d71920;color:white}
+.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:15px}
+.card{background:white;border-radius:7px;overflow:hidden;box-shadow:0 2px 9px #0000000b}
+.thumb{height:125px;background:linear-gradient(135deg,#f9dede,#e5eaf3);display:flex;align-items:center;justify-content:center;font-size:42px}
+.card-content{padding:14px}
+.label{color:#d71920;font-size:12px;font-weight:bold}
+.card h3{font-size:17px;line-height:1.65;margin:8px 0}
+.card p{font-size:13px;color:#697386;line-height:1.7}
+.date{font-size:12px;color:#888}
+footer{background:#111827;color:white;text-align:center;padding:28px 15px;margin-top:35px}
+footer p{font-size:13px;color:#d1d5db;line-height:1.8}
+.empty{background:white;padding:22px;border-radius:7px}
+@media(max-width:650px){
+ .logo{font-size:29px}
+ .header{padding:16px 4%}
+ .search{width:100%}
+ .search input{flex:1;width:auto;max-width:none}
+ .grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+ .thumb{height:95px;font-size:34px}
+ .card-content{padding:10px}
+ .card h3{font-size:15px}
+ .hero h1{font-size:24px}
+ .hero{padding:23px 17px}
+}
+@media(max-width:370px){.grid{grid-template-columns:1fr}}
+</style><style>
+.ssd-brand {
+  text-align: center;
+  padding: 12px;
+  background: #ffffff;
+}
+
+.ssd-logo {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+}
+
+.ssd-banner {
+  display: block;
+  width: 100%;
+  max-width: 1000px;
+  height: auto;
+  margin: 12px auto;
+}
+</style>
+</head>
+<body> <header class="ssd-brand">
+  <img src="ssd-news-logo.png"
+       alt="SSD NEWS Logo"
+       class="ssd-logo">
+
+  <img src="ssd-news-banner.png"
+       alt="SSD NEWS Banner"
+       class="ssd-banner">
+</header>
+<div class="top">SSD NEWS — সত্যের সঙ্গে, মানুষের পাশে</div>
+
+<header class="header">
+ <div>
+  <div class="logo">SSD <span>NEWS</span></div>
+  <div class="tag">সত্যের সঙ্গে, মানুষের পাশে</div>
+ </div>
+ <form class="search" id="searchForm">
+  <input id="searchInput" type="search" placeholder="খবর খুঁজুন..." aria-label="খবর খুঁজুন">
+  <button type="submit">সার্চ</button>
+ </form>
+</header>
+
+<nav aria-label="প্রধান মেনু">
+ <a href="#home">প্রচ্ছদ</a>
+ <a href="#news" data-category="বাংলাদেশ">বাংলাদেশ</a>
+ <a href="#news" data-category="বিশ্ব">বিশ্ব</a>
+ <a href="#news" data-category="রাজনীতি">রাজনীতি</a>
+ <a href="#news" data-category="খেলাধুলা">খেলাধুলা</a>
+ <a href="#news" data-category="বিনোদন">বিনোদন</a>
+ <a href="#news" data-category="প্রযুক্তি">প্রযুক্তি</a>
+ <a href="#about">আমাদের সম্পর্কে</a>
+</nav>
+
+<main class="container" id="home">
+ <div class="breaking">
+  <b>সংবাদ</b>
+  <span id="breakingText">SSD News-এ স্বাগতম। গুরুত্বপূর্ণ খবর এখানে প্রকাশিত হবে।</span>
+ </div>
+
+ <section class="hero">
+  <small>আপনার সংবাদমাধ্যম</small>
+  <h1>সত্যের সঙ্গে, মানুষের পাশে</h1>
+  <p>বাংলাদেশ ও বিশ্বের খবর, রাজনীতি, খেলাধুলা, বিনোদন এবং প্রযুক্তির সংবাদ জানতে থাকুন SSD News-এর সঙ্গে।</p>
+ </section>
+
+ <h2 class="section-title" id="news">সর্বশেষ সংবাদ</h2>
+ <div class="categories">
+  <button class="active" data-filter="সব">সব খবর</button>
+  <button data-filter="বাংলাদেশ">বাংলাদেশ</button>
+  <button data-filter="বিশ্ব">বিশ্ব</button>
+  <button data-filter="রাজনীতি">রাজনীতি</button>
+  <button data-filter="খেলাধুলা">খেলাধুলা</button>
+  <button data-filter="বিনোদন">বিনোদন</button>
+  <button data-filter="প্রযুক্তি">প্রযুক্তি</button>
+ </div>
+
+ <div class="grid" id="newsGrid">
+  <article class="card" data-category="বাংলাদেশ">
+   <div class="thumb">🇧🇩</div>
+   <div class="card-content">
+    <span class="label">বাংলাদেশ</span>
+    <h3>বাংলাদেশের গুরুত্বপূর্ণ খবর</h3>
+    <p>দেশের সর্বশেষ খবর ও আপডেট এখানে প্রকাশ করুন।</p>
+    <span class="date">নমুনা সংবাদ</span>
+   </div>
+  </article>
+  <article class="card" data-category="বিশ্ব">
+   <div class="thumb">🌍</div>
+   <div class="card-content">
+    <span class="label">বিশ্ব</span>
+    <h3>বিশ্বের নানা প্রান্তের সংবাদ</h3>
+    <p>আন্তর্জাতিক ঘটনা ও গুরুত্বপূর্ণ খবর এখানে যোগ করুন।</p>
+    <span class="date">নমুনা সংবাদ</span>
+   </div>
+  </article>
+  <article class="card" data-category="রাজনীতি">
+   <div class="thumb">🏛️</div>
+   <div class="card-content">
+    <span class="label">রাজনীতি</span>
+    <h3>রাজনীতি ও জনজীবন</h3>
+    <p>রাজনীতি ও জনস্বার্থসংশ্লিষ্ট খবর প্রকাশ করুন।</p>
+    <span class="date">নমুনা সংবাদ</span>
+   </div>
+  </article>
+  <article class="card" data-category="খেলাধুলা">
+   <div class="thumb">🏏</div>
+   <div class="card-content">
+    <span class="label">খেলাধুলা</span>
+    <h3>খেলার মাঠের খবর</h3>
+    <p>ক্রিকেট, ফুটবল ও অন্যান্য খেলার সংবাদ এখানে দিন।</p>
+    <span class="date">নমুনা সংবাদ</span>
+   </div>
+  </article>
+  <article class="card" data-category="বিনোদন">
+   <div class="thumb">🎬</div>
+   <div class="card-content">
+    <span class="label">বিনোদন</span>
+    <h3>বিনোদন জগতের আপডেট</h3>
+    <p>সিনেমা, সংগীত ও তারকাদের খবর প্রকাশ করুন।</p>
+    <span class="date">নমুনা সংবাদ</span>
+   </div>
+  </article>
+  <article class="card" data-category="প্রযুক্তি">
+   <div class="thumb">📱</div>
+   <div class="card-content">
+    <span class="label">প্রযুক্তি</span>
+    <h3>প্রযুক্তি ও ডিজিটাল বিশ্ব</h3>
+    <p>মোবাইল, ইন্টারনেট ও প্রযুক্তির খবর এখানে দিন।</p>
+    <span class="date">নমুনা সংবাদ</span>
+   </div>
+  </article>
+ </div>
+ <p id="noResults" class="empty" hidden>এই অনুসন্ধানে কোনো খবর পাওয়া যায়নি।</p>
+
+ <section id="about">
+  <h2 class="section-title">SSD News সম্পর্কে</h2>
+  <div class="empty">
+   <p>SSD News একটি সংবাদ ওয়েবসাইটের প্রাথমিক সংস্করণ। আমাদের লক্ষ্য নির্ভরযোগ্য তথ্য ও সংবাদ পাঠকের কাছে পৌঁছে দেওয়া।</p>
+   <p>যোগাযোগের তথ্য ও সম্পাদকের পরিচয় এখানে পরে যোগ করতে পারবেন।</p>
+  </div>
+ </section>
+</main>
+
+<footer>
+ <div class="logo">SSD <span style="color:white">NEWS</span></div>
+ <p>সত্যের সঙ্গে, মানুষের পাশে</p>
+ <p>© <span id="year"></span> SSD News. সর্বস্বত্ব সংরক্ষিত।</p>
+</footer>
+
+<script>
+const cards=[...document.querySelectorAll('.card')];
+const filterButtons=[...document.querySelectorAll('[data-filter]')];
+const searchInput=document.getElementById('searchInput');
+let activeCategory='সব';
+
+function updateNews(){
+ const q=searchInput.value.trim().toLowerCase();
+ let count=0;
+ cards.forEach(card=>{
+  const matchesCategory=activeCategory==='সব'||card.dataset.category===activeCategory;
+  const matchesSearch=card.innerText.toLowerCase().includes(q);
+  const show=matchesCategory&&matchesSearch;
+  card.hidden=!show;
+  if(show)count++;
+ });
+ document.getElementById('noResults').hidden=count!==0;
+}
+filterButtons.forEach(button=>{
+ button.addEventListener('click',()=>{
+  activeCategory=button.dataset.filter;
+  filterButtons.forEach(b=>b.classList.toggle('active',b===button));
+  updateNews();
+ });
+});
+document.querySelectorAll('nav [data-category]').forEach(link=>{
+ link.addEventListener('click',()=>{
+  activeCategory=link.dataset.category;
+  filterButtons.forEach(b=>b.classList.toggle('active',b.dataset.filter===activeCategory));
+  updateNews();
+ });
+});
+document.getElementById('searchForm').addEventListener('submit',e=>{
+ e.preventDefault();
+ updateNews();
+ document.getElementById('news').scrollIntoView({behavior:'smooth'});
+});
+document.getElementById('year').textContent=new Date().getFullYear();
+</script>
+</body>
+  </html><!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SSD NEWS | সত্যের সঙ্গে, মানুষের পাশে</title>
+<meta name="description" content="SSD News — বাংলাদেশ, বিশ্ব, রাজনীতি, খেলাধুলা, বিনোদন ও প্রযুক্তির খবর।">
+<style>
+*{box-sizing:border-box}
+body{margin:0;font-family:Arial,"Noto Sans Bengali",sans-serif;background:#f3f5f8;color:#202735}
+a{text-decoration:none;color:inherit}
+.top{background:#111827;color:white;padding:9px 4%;font-size:13px}
+.header{background:white;padding:20px 4%;display:flex;align-items:center;justify-content:space-between;gap:15px;flex-wrap:wrap}
+.logo{font-size:34px;font-weight:900;color:#d71920;letter-spacing:-1px}
+.logo span{color:#111827}
+.tag{font-size:12px;color:#555;margin-top:4px}
+.search{display:flex;gap:5px}
+.search input{padding:11px;width:180px;max-width:55vw;border:1px solid #ddd;border-radius:5px}
+button{cursor:pointer;border:0;border-radius:5px;padding:11px 14px;background:#d71920;color:white;font-weight:bold}
+nav{background:#d71920;color:white;display:flex;gap:0;overflow-x:auto;white-space:nowrap;padding:0 3%}
+nav a{padding:14px 13px;font-size:14px}
+nav a:hover{background:#a70f16}
+.container{max-width:1100px;margin:22px auto;padding:0 14px}
+.breaking{background:white;display:flex;align-items:center;gap:12px;padding:12px;margin-bottom:20px;border-radius:6px}
+.breaking b{background:#d71920;color:white;padding:9px;font-size:13px;white-space:nowrap}
+#breakingText{font-size:14px}
+.hero{background:#202735;color:white;border-radius:8px;padding:30px 22px;margin-bottom:22px}
+.hero small{color:#ff777c;font-weight:bold;letter-spacing:1px}
+.hero h1{font-size:30px;line-height:1.4;margin:12px 0}
+.hero p{color:#e2e5ec;line-height:1.8;margin-bottom:0}
+.section-title{border-left:5px solid #d71920;padding:8px 12px;margin:25px 0 15px;background:white;font-size:21px}
+.categories{display:flex;gap:9px;flex-wrap:wrap;margin-bottom:20px}
+.categories button{background:white;color:#333;border:1px solid #ddd}
+.categories button.active,.categories button:hover{background:#d71920;color:white}
+.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:15px}
+.card{background:white;border-radius:7px;overflow:hidden;box-shadow:0 2px 9px #0000000b}
+.thumb{height:125px;background:linear-gradient(135deg,#f9dede,#e5eaf3);display:flex;align-items:center;justify-content:center;font-size:42px}
+.card-content{padding:14px}
+.label{color:#d71920;font-size:12px;font-weight:bold}
+.card h3{font-size:17px;line-height:1.65;margin:8px 0}
+.card p{font-size:13px;color:#697386;line-height:1.7}
+.date{font-size:12px;color:#888}
+footer{background:#111827;color:white;text-align:center;padding:28px 15px;margin-top:35px}
+footer p{font-size:13px;color:#d1d5db;line-height:1.8}
+.empty{background:white;padding:22px;border-radius:7px}
+@media(max-width:650px){
+ .logo{font-size:29px}
+ .header{padding:16px 4%}
+ .search{width:100%}
+ .search input{flex:1;width:auto;max-width:none}
+ .grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+ .thumb{height:95px;font-size:34px}
+ .card-content{padding:10px}
+ .card h3{font-size:15px}
+ .hero h1{font-size:24px}
+ .hero{padding:23px 17px}
+}
+@media(max-width:370px){.grid{grid-template-columns:1fr}}
+</style><style>
+.ssd-brand {
+  text-align: center;
+  padding: 12px;
+  background: #ffffff;
+}
+
+.ssd-logo {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+}
+
+.ssd-banner {
+  display: block;
+  width: 100%;
+  max-width: 1000px;
+  height: auto;
+  margin: 12px auto;
+}
+</style>
+</head>
+<body> <header class="ssd-brand">
+  <img src="ssd-news-logo.png"
+       alt="SSD NEWS Logo"
+       class="ssd-logo">
+
+  <img src="ssd-news-banner.png"
+       alt="SSD NEWS Banner"
+       class="ssd-banner">
+</header>
+<div class="top">SSD NEWS — সত্যের সঙ্গে, মানুষের পাশে</div>
+
+<header class="header">
+ <div>
+  <div class="logo">SSD <span>NEWS</span></div>
+  <div class="tag">সত্যের সঙ্গে, মানুষের পাশে</div>
+ </div>
+ <form class="search" id="searchForm">
+  <input id="searchInput" type="search" placeholder="খবর খুঁজুন..." aria-label="খবর খুঁজুন">
+  <button type="submit">সার্চ</button>
+ </form>
+</header>
+
+<nav aria-label="প্রধান মেনু">
+ <a href="#home">প্রচ্ছদ</a>
+ <a href="#news" data-category="বাংলাদেশ">বাংলাদেশ</a>
+ <a href="#news" data-category="বিশ্ব">বিশ্ব</a>
+ <a href="#news" data-category="রাজনীতি">রাজনীতি</a>
+ <a href="#news" data-category="খেলাধুলা">খেলাধুলা</a>
+ <a href="#news" data-category="বিনোদন">বিনোদন</a>
+ <a href="#news" data-category="প্রযুক্তি">প্রযুক্তি</a>
+ <a href="#about">আমাদের সম্পর্কে</a>
+</nav>
+
+<main class="container" id="home">
+ <div class="breaking">
+  <b>সংবাদ</b>
+  <span id="breakingText">SSD News-এ স্বাগতম। গুরুত্বপূর্ণ খবর এখানে প্রকাশিত হবে।</span>
+ </div>
+
+ <section class="hero">
+  <small>আপনার সংবাদমাধ্যম</small>
+  <h1>সত্যের সঙ্গে, মানুষের পাশে</h1>
+  <p>বাংলাদেশ ও বিশ্বের খবর, রাজনীতি, খেলাধুলা, বিনোদন এবং প্রযুক্তির সংবাদ জানতে থাকুন SSD News-এর সঙ্গে।</p>
+ </section>
+
+ <h2 class="section-title" id="news">সর্বশেষ সংবাদ</h2>
+ <div class="categories">
+  <button class="active" data-filter="সব">সব খবর</button>
+  <button data-filter="বাংলাদেশ">বাংলাদেশ</button>
+  <button data-filter="বিশ্ব">বিশ্ব</button>
+  <button data-filter="রাজনীতি">রাজনীতি</button>
+  <button data-filter="খেলাধুলা">খেলাধুলা</button>
+  <button data-filter="বিনোদন">বিনোদন</button>
+  <button data-filter="প্রযুক্তি">প্রযুক্তি</button>
+ </div>
+
+ <div class="grid" id="newsGrid">
+  <article class="card" data-category="বাংলাদেশ">
+   <div class="thumb">🇧🇩</div>
+   <div class="card-content">
+    <span class="label">বাংলাদেশ</span>
+    <h3>বাংলাদেশের গুরুত্বপূর্ণ খবর</h3>
+    <p>দেশের সর্বশেষ খবর ও আপডেট এখানে প্রকাশ করুন।</p>
+    <span class="date">নমুনা সংবাদ</span>
+   </div>
+  </article>
+  <article class="card" data-category="বিশ্ব">
+   <div class="thumb">🌍</div>
+   <div class="card-content">
+    <span class="label">বিশ্ব</span>
+    <h3>বিশ্বের নানা প্রান্তের সংবাদ</h3>
+    <p>আন্তর্জাতিক ঘটনা ও গুরুত্বপূর্ণ খবর এখানে যোগ করুন।</p>
+    <span class="date">নমুনা সংবাদ</span>
+   </div>
+  </article>
+  <article class="card" data-category="রাজনীতি">
+   <div class="thumb">🏛️</div>
+   <div class="card-content">
+    <span class="label">রাজনীতি</span>
+    <h3>রাজনীতি ও জনজীবন</h3>
+    <p>রাজনীতি ও জনস্বার্থসংশ্লিষ্ট খবর প্রকাশ করুন।</p>
+    <span class="date">নমুনা সংবাদ</span>
+   </div>
+  </article>
+  <article class="card" data-category="খেলাধুলা">
+   <div class="thumb">🏏</div>
+   <div class="card-content">
+    <span class="label">খেলাধুলা</span>
+    <h3>খেলার মাঠের খবর</h3>
+    <p>ক্রিকেট, ফুটবল ও অন্যান্য খেলার সংবাদ এখানে দিন।</p>
+    <span class="date">নমুনা সংবাদ</span>
+   </div>
+  </article>
+  <article class="card" data-category="বিনোদন">
+   <div class="thumb">🎬</div>
+   <div class="card-content">
+    <span class="label">বিনোদন</span>
+    <h3>বিনোদন জগতের আপডেট</h3>
+    <p>সিনেমা, সংগীত ও তারকাদের খবর প্রকাশ করুন।</p>
+    <span class="date">নমুনা সংবাদ</span>
+   </div>
+  </article>
+  <article class="card" data-category="প্রযুক্তি">
+   <div class="thumb">📱</div>
+   <div class="card-content">
+    <span class="label">প্রযুক্তি</span>
+    <h3>প্রযুক্তি ও ডিজিটাল বিশ্ব</h3>
+    <p>মোবাইল, ইন্টারনেট ও প্রযুক্তির খবর এখানে দিন।</p>
+    <span class="date">নমুনা সংবাদ</span>
+   </div>
+  </article>
+ </div>
+ <p id="noResults" class="empty" hidden>এই অনুসন্ধানে কোনো খবর পাওয়া যায়নি।</p>
+
+ <section id="about">
+  <h2 class="section-title">SSD News সম্পর্কে</h2>
+  <div class="empty">
+   <p>SSD News একটি সংবাদ ওয়েবসাইটের প্রাথমিক সংস্করণ। আমাদের লক্ষ্য নির্ভরযোগ্য তথ্য ও সংবাদ পাঠকের কাছে পৌঁছে দেওয়া।</p>
+   <p>যোগাযোগের তথ্য ও সম্পাদকের পরিচয় এখানে পরে যোগ করতে পারবেন।</p>
+  </div>
+ </section>
+</main>
+
+<footer>
+ <div class="logo">SSD <span style="color:white">NEWS</span></div>
+ <p>সত্যের সঙ্গে, মানুষের পাশে</p>
+ <p>© <span id="year"></span> SSD News. সর্বস্বত্ব সংরক্ষিত।</p>
+</footer>
+
+<script>
+const cards=[...document.querySelectorAll('.card')];
+const filterButtons=[...document.querySelectorAll('[data-filter]')];
+const searchInput=document.getElementById('searchInput');
+let activeCategory='সব';
+
+function updateNews(){
+ const q=searchInput.value.trim().toLowerCase();
+ let count=0;
+ cards.forEach(card=>{
+  const matchesCategory=activeCategory==='সব'||card.dataset.category===activeCategory;
+  const matchesSearch=card.innerText.toLowerCase().includes(q);
+  const show=matchesCategory&&matchesSearch;
+  card.hidden=!show;
+  if(show)count++;
+ });
+ document.getElementById('noResults').hidden=count!==0;
+}
+filterButtons.forEach(button=>{
+ button.addEventListener('click',()=>{
+  activeCategory=button.dataset.filter;
+  filterButtons.forEach(b=>b.classList.toggle('active',b===button));
+  updateNews();
+ });
+});
+document.querySelectorAll('nav [data-category]').forEach(link=>{
+ link.addEventListener('click',()=>{
+  activeCategory=link.dataset.category;
+  filterButtons.forEach(b=>b.classList.toggle('active',b.dataset.filter===activeCategory));
+  updateNews();
+ });
+});
+document.getElementById('searchForm').addEventListener('submit',e=>{
+ e.preventDefault();
+ updateNews();
+ document.getElementById('news').scrollIntoView({behavior:'smooth'});
+});
+document.getElementById('year').textContent=new Date().getFullYear();
+</script>
+</body>
+  </html>
