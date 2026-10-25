@@ -246,6 +246,69 @@ document.getElementById('searchForm').addEventListener('submit',e=>{
 });
 document.getElementById('year').textContent=new Date().getFullYear();
 </script>
+</main>
 
+<footer>
+  <div class="logo">SSD <span style="color:white">NEWS</span></div>
+  <p>সত্যের সঙ্গে, মানুষের পাশে</p>
+  <p>© <span id="year"></span> SSD News. সর্বস্বত্ব সংরক্ষিত।</p>
+</footer>
+
+<script>
+const cards = [...document.querySelectorAll('.card')];
+const filterButtons = [...document.querySelectorAll('[data-filter]')];
+const searchInput = document.getElementById('searchInput');
+let activeCategory = 'সব';
+
+function updateNews() {
+  const q = searchInput.value.trim().toLowerCase();
+  let count = 0;
+
+  cards.forEach(card => {
+    const matchesCategory =
+      activeCategory === 'সব' ||
+      card.dataset.category === activeCategory;
+    const matchesSearch =
+      card.innerText.toLowerCase().includes(q);
+    const show = matchesCategory && matchesSearch;
+
+    card.hidden = !show;
+    if (show) count++;
+  });
+
+  document.getElementById('noResults').hidden = count !== 0;
+}
+
+filterButtons.forEach(button => {
+  button.addEventListener('click', () => {
+    activeCategory = button.dataset.filter;
+    filterButtons.forEach(b =>
+      b.classList.toggle('active', b === button)
+    );
+    updateNews();
+  });
+});
+
+document.querySelectorAll('nav [data-category]').forEach(link => {
+  link.addEventListener('click', () => {
+    activeCategory = link.dataset.category;
+    filterButtons.forEach(b =>
+      b.classList.toggle('active', b.dataset.filter === activeCategory)
+    );
+    updateNews();
+  });
+});
+
+document.getElementById('searchForm').addEventListener('submit', e => {
+  e.preventDefault();
+  updateNews();
+  document.getElementById('news').scrollIntoView({ behavior: 'smooth' });
+});
+
+document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>
 </body>
                                                </html>
