@@ -42,6 +42,29 @@ $('searchForm').onsubmit=e=>{e.preventDefault();render();$('news').scrollIntoVie
 function loadOwn(){try{own=JSON.parse(localStorage.getItem('ssdOwnNews')||'[]');if(!Array.isArray(own))own=[]}catch{own=[]}}
 $('showAdmin').onclick=()=>$('admin').classList.toggle('open');
 $('admin').onsubmit=e=>{e.preventDefault();let n={id:'own-'+Date.now(),title:$('title').value.trim(),category:$('category').value,image:$('image').value.trim(),summary:$('summary').value.trim(),body:$('body').value.trim(),date:new Date().toISOString(),link:''};own.unshift(n);try{localStorage.setItem('ssdOwnNews',JSON.stringify(own))}catch{alert('সেভ করা যায়নি');return}e.target.reset();render();alert('খবরটি শুধু এই ডিভাইসে সেভ হয়েছে; সবার জন্য প্রকাশিত হয়নি।')};
-async function loadFeed(){$('status').textContent='BBC News বাংলা ফিড লোড হচ্ছে…';try{let r=await fetch(proxy,{cache:'no-store'}),d=await r.json();if(!r.ok||d.status!=='ok'||!Array.isArray(d.items))throw Error();feed=d.items.map((x,i)=>({id:'feed-'+i,title:x.title||'শিরোনাম নেই',category:categoryFor((x.title||'')+' '+(x.description||'')),image:x.thumbnail||x.enclosure?.link||'',summary:(x.description||'বিস্তারিত জানতে মূল খবরটি পড়ুন।').replace(/<[^>]*>/g,' ').replace(/\s+/g,' ').trim().slice(0,250),body:(x.description||'').replace(/<[^>]*>/g,' ').trim(),date:x.pubDate,link:x.link}));$('status').textContent=feed.length+'টি ফিড-খবর এসেছে। বিভাগ স্বয়ংক্রিয়ভাবে অনুমান করা হয়েছে, তাই কিছু বিভাগ ভুল হতে পারে।';render()}catch{$('status').textContent='এখন ফিড লোড হয়নি। ইন্টারনেট বা ফিড-সার্ভিসে সমস্যা হলে পরে রিফ্রেশ করুন।';render()}}
-$('refresh').onclick=loadFeed;$('year').textContent=new Date().getFullYear();loadOwn();render();loadFeed();
+async function loadFeed(){
+  const status=$('status');
+  status.textContent='খবর লোড হচ্ছে…';
+  try{
+    const url='https://api.rss2json.com/v1/api.json?rss_url='+encodeURIComponent('https://feeds.bbci.co.uk/bengali/rss.xml')+'&_='+Date.now();
+    const response=await fetch(url,{cache:'no-store'});
+    if(!response.ok) throw Error('Network error');
+    const data=await response.json();
+    if(data.status!=='ok'||!Array.isArray(data.items)||!data.items.length) throw Error('No news');
+    feed=data.items.map((x,i)=>({
+      id:'feed-'+i,
+      title:x.title||'শিরোনাম নেই',
+      category:categoryFor((x.title||'')+' '+(x.description||'')),
+      image:x.thumbnail||x.enclosure?.link||'',
+      summary:(x.description||'বিস্তারিত জানতে মূল খবরটি পড়ুন।').replace(/<[^>]*>/g,' ').trim().slice(0,250),
+      body:(x.description||'').replace(/<[^>]*>/g,' ').trim(),
+      date:x.pubDate,
+      link:x.link
+    }));
+    status.textContent=feed.length+'টি খবর পাওয়া গেছে।';
+    render();
+  }catch(error){
+    status.textContent='খবর লোড হয়নি। ইন্টারনেট চালু রেখে রিফ্রেশ করুন।';
+  }
+  }('refresh').onclick=loadFeed;$('year').textContent=new Date().getFullYear();loadOwn();render();loadFeed();
 </script></body></html>
