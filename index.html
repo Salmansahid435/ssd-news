@@ -49,7 +49,7 @@ $('searchForm').onsubmit=e=>{e.preventDefault();render();$('news').scrollIntoVie
 function loadOwn(){try{own=JSON.parse(localStorage.getItem('ssdOwnNews')||'[]');if(!Array.isArray(own))own=[]}catch{own=[]}}
 $('showAdmin').onclick=()=>$('admin').classList.toggle('open');
 $('admin').onsubmit=e=>{e.preventDefault();let n={id:'own-'+Date.now(),title:$('title').value.trim(),category:$('category').value,image:$('image').value.trim(),summary:$('summary').value.trim(),body:$('body').value.trim(),date:new Date().toISOString(),link:''};own.unshift(n);try{localStorage.setItem('ssdOwnNews',JSON.stringify(own))}catch{alert('সেভ করা যায়নি');return}e.target.reset();render();alert('খবরটি শুধু এই ডিভাইসে সেভ হয়েছে; সবার জন্য প্রকাশিত হয়নি।')};
-async function loadFeed(){
+async function loadFeed()}
   const status=$('status');
   status.textContent='খবর লোড হচ্ছে…';
   try{
