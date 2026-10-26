@@ -74,5 +74,6 @@ async function loadFeed(){
   }catch(error){
     status.textContent='খবর লোড হয়নি। ইন্টারনেট চালু রেখে রিফ্রেশ করুন।';
   }
-  }('refresh').onclick=loadFeed;$('year').textContent=new Date().getFullYear();loadOwn();render();loadFeed();
+  }}
+$('refresh').onclick=loadFeed;$('year').textContent=new Date().getFullYear();loadOwn();render();loadFeed();
 </script></body></html>
